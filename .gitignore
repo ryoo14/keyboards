@@ -1,6 +1,7 @@
-/keyboard_data/order_jlc
+/order_jlc
 fp-info-cache
 fp-lib-table
 .DS_Store
 *backup*
 *.lck
+*.kicad_prl

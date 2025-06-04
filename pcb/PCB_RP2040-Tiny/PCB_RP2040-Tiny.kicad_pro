@@ -474,7 +474,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "rhyn-oc47-assemble.kicad_pro",
+    "filename": "PCB_RP2040-Tiny.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -512,7 +512,7 @@
       "netlist": "",
       "plot": "../order_jlc/pcb/",
       "pos_files": "./",
-      "specctra_dsn": "rhyn-oc47-assemble.dsn",
+      "specctra_dsn": "PCB_RP2040-Tiny.dsn",
       "step": "",
       "svg": "",
       "vrml": ""

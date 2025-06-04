@@ -480,7 +480,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "assemble_direct.kicad_pro",
+    "filename": "PCB_RP2040_Direct.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -518,7 +518,7 @@
       "netlist": "",
       "plot": "../order_jlc/pcb_direct/",
       "pos_files": "./",
-      "specctra_dsn": "assemble_direct.dsn",
+      "specctra_dsn": "PCB_RP2040_Direct.dsn",
       "step": "",
       "svg": "",
       "vrml": ""

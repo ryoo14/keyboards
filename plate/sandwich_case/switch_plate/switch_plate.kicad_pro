@@ -464,7 +464,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "rhyn-oc47-top_plate.kicad_pro",
+    "filename": "switch_plate.kicad_pro",
     "version": 3
   },
   "net_settings": {
@@ -502,7 +502,7 @@
       "netlist": "",
       "plot": "../order_jlc/top/",
       "pos_files": "",
-      "specctra_dsn": "rhyn-oc47-top_plate.dsn",
+      "specctra_dsn": "switch_plate.dsn",
       "step": "",
       "svg": "",
       "vrml": ""
