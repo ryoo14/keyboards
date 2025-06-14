@@ -83,18 +83,18 @@ If manufacturing a sandwich case, you will need:
 ### 3D Printed Case Types
 There are two types of 3D printed cases available:
 
-1. **v0.2 Case** (for RP2040-Tiny)
+1. **v0.2 Case** (`case/rhyn47_tiny_case.step` for RP2040-Tiny)
    - Compatible with v0.2 PCB using RP2040-Tiny microcontroller board
    - **Compatibility issue**: USB-C port position differs from v0.3 case
    - **Potential interference**: Daughter board switch may interfere with PCB placement in some positions
    - **Conthrough trimming recommended**: Pin headers extending from microcontroller board may interfere with case bottom, trimming recommended
 
-2. **v0.3 Case** (for direct-mounted RP2040)
+2. **v0.3 Case** (`case/rhyn47_direct_case.step` for direct-mounted RP2040)
    - Compatible with v0.3 PCB with direct-mounted RP2040
    - **Compatibility issue**: USB-C port position differs from v0.2 case
    - **Status**: Not yet tested - will be updated once physical samples are received
 
-### Sidebar
+### Sidebar(`case/rhyn47_sidebar.step or case/rhyn47_sidebar_mini.step`)
 Compatible with both v0.2 and v0.3 versions
 
 - **Standard and Mini versions**: No significant difference in functionality, mini version is slightly smaller but the difference is minimal
