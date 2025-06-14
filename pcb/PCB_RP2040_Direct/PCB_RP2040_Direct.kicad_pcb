@@ -38985,7 +38985,7 @@
 				(justify mirror)
 			)
 		)
-		(property "JLCPCB Part #" "JLCPCB Part #"
+		(property "JLCPCB Part #" "C341520"
 			(at 0 0 0)
 			(unlocked yes)
 			(layer "B.Fab")
@@ -39308,6 +39308,20 @@
 			(effects
 				(font
 					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+				(justify mirror)
+			)
+		)
+		(property "JLCPCB Part #" "C2843335"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "B.Fab")
+			(hide yes)
+			(uuid "1461675d-4da2-45d7-96df-b1859d72ccbd")
+			(effects
+				(font
+					(size 1 1)
 					(thickness 0.15)
 				)
 				(justify mirror)

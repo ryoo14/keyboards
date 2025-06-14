@@ -519,7 +519,7 @@
       "plot": "../order_jlc/pcb_direct/",
       "pos_files": "./",
       "specctra_dsn": "PCB_RP2040_Direct.dsn",
-      "step": "",
+      "step": "PCB_RP2040_Direct.step",
       "svg": "",
       "vrml": ""
     },
