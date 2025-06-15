@@ -22,7 +22,7 @@ https://www.keyboard-layout-editor.com/#/gists/312092b0a95833e6baeb8218b6a8bbec
 ### Maintenance
 - **v0.3 screwless design**: Completely screwless assembly for easy maintenance and modification
 
-## Version Differences
+## PCB
 
 ### v0.1 (Not Recommended)
 - Uses RP2040-Tiny microcontroller board
@@ -45,6 +45,12 @@ https://www.keyboard-layout-editor.com/#/gists/312092b0a95833e6baeb8218b6a8bbec
 - This is the current official version of the RHYn47
 
 **Important**: Each version requires different compatible cases and plates. Please read the precautions carefully before manufacturing.
+
+When ordering PCB assembly, there are several important considerations to keep in mind. The BOM and position files generated automatically often contain an error where diodes are incorrectly listed as top-side placement when they should actually be on the bottom side. This is a critical issue that must be addressed before placing any order - always manually review and change the diode placement from "top" to "bottom" in the position files to avoid assembly mistakes. 
+
+Additionally, any suggestions for cheaper alternative part numbers are always appreciated for cost optimization.
+
+Production files are available in the respective `pcb/*/production/` directories.
 
 ## Firmware
 
@@ -115,11 +121,3 @@ When ordering from JLC3DP:
 
 ### License Notice
 **Important**: Case STEP files were created using the free version of Autodesk Fusion 360, which restricts commercial use. Please use these files for personal use only.
-
-## PCB
-
-When ordering PCB assembly, there are several important considerations to keep in mind. The BOM and position files generated automatically often contain an error where diodes are incorrectly listed as top-side placement when they should actually be on the bottom side. This is a critical issue that must be addressed before placing any order - always manually review and change the diode placement from "top" to "bottom" in the position files to avoid assembly mistakes. 
-
-Additionally, any suggestions for cheaper alternative part numbers are always appreciated for cost optimization.
-
-Production files are available in the respective `pcb/*/production/` directories.
