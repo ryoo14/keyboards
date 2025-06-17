@@ -1,2 +1,2 @@
-# keyboards/rhyn_oc47/rules.mk
-DEFAULT_FOLDER := rhyn_oc47/v0_3
+# keyboards/rhyn47/rules.mk
+DEFAULT_FOLDER := rhyn47/v0_3

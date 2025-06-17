@@ -1,6 +1,6 @@
 {
     "manufacturer": "ryoo.cc",
-    "keyboard_name": "rhyn_oc47",
+    "keyboard_name": "rhyn47",
     "maintainer": "ryoo14",
     "bootloader": "rp2040",
     "diode_direction": "COL2ROW",
@@ -17,7 +17,7 @@
         "rows": ["GP14", "GP15", "GP26", "GP27"]
     },
     "processor": "RP2040",
-    "url": "https://github.com/ryoo14/rhyn_oc47",
+    "url": "https://github.com/ryoo14/rhyn47",
     "usb": {
         "device_version": "1.0.0",
         "pid": "0x0000",
