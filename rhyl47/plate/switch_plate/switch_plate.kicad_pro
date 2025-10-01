@@ -503,7 +503,7 @@
       "plot": "../../order_jlc/switch_plate",
       "pos_files": "",
       "specctra_dsn": "rhyn-oc47-top_plate.dsn",
-      "step": "",
+      "step": "switch_plate.step",
       "svg": "",
       "vrml": ""
     },
