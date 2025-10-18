@@ -3,7 +3,7 @@
     "keyboard_name": "rhyl47",
     "maintainer": "ryoo14",
     "bootloader": "rp2040",
-    "diode_direction": "COL2ROW",
+    "diode_direction": "ROW2COL",
     "features": {
         "bootmagic": true,
         "command": false,
