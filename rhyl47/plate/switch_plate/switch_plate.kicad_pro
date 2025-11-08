@@ -500,7 +500,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "../../order_jlc/switch_plate",
+      "plot": "../../order_jlc/switch_plate/",
       "pos_files": "",
       "specctra_dsn": "rhyn-oc47-top_plate.dsn",
       "step": "switch_plate.step",
