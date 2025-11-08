@@ -5,3 +5,4 @@ fp-lib-table
 *backup*
 *.lck
 *.kicad_prl
+*.FCBak
