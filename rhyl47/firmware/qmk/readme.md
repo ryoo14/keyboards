@@ -1,6 +1,6 @@
 # rhyl47
 
-![rhyl47](https://d3toh8on7lf5va.cloudfront.net/rhyn-oc47_3dcase.jpg)
+![rhyl47](https://d3toh8on7lf5va.cloudfront.net/rhyl47-aluminium3.jpg)
 
 *A short description of the keyboard/project*
 
