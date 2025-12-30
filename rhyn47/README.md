@@ -1,6 +1,6 @@
 # RHYn47
 
-![rhyn47](https://d3toh8on7lf5va.cloudfront.net/rhyn47_v3.jpg)
+![rhyn47](https://d3toh8on7lf5va.cloudfront.net/rhyn47-abacus-mini.jpg)
 
 ## Layout
 https://www.keyboard-layout-editor.com/#/gists/312092b0a95833e6baeb8218b6a8bbec
