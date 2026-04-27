@@ -1,5 +1,8 @@
 // Copyright 2025 cormoran707
+// Copyright 2026 ryoo (modifications for RHYL47B)
 // SPDX-License-Identifier: GPL-2.0-or-later
+//
+// Modified from the original `dya` keyboard code by cormoran707.
 
 #include "quantum.h"
 #include "rhyl47b.h"
