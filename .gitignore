@@ -6,3 +6,4 @@ fp-lib-table
 *.lck
 *.kicad_prl
 *.FCBak
+.history
