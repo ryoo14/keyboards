@@ -1,14 +1,19 @@
-# Keyboards designed by me
+# rhyn47
 
-## RHYn47(standard profile)
+rhyn47 is a mechanical keyboard I designed.
 
-![rhyn47](https://d3toh8on7lf5va.cloudfront.net/rhyn47-abacus-mini.jpg)
+It comes in three models: standard, low-profile and low-profile with trackball.
 
-## RHYl47(low profile)
+Please refer to the README file located in each keyboard's folder.
 
-![rhyl47](https://d3toh8on7lf5va.cloudfront.net/rhyl47-aluminium3-mini.jpg)
+## Standard
 
-<br />
+![Standard](https://d3toh8on7lf5va.cloudfront.net/rhyn47-abacus-mini.jpg)
 
-![rhyl47 resin](https://d3toh8on7lf5va.cloudfront.net/rhyl47-resin.jpg)
+## Low-Profile
 
+![rhyl47](https://d3toh8on7lf5va.cloudfront.net/rhyx-pff-rhyl47.jpg)
+
+## Low-Profile with TrackBall
+
+coming soon
