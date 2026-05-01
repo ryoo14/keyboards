@@ -1,4 +1,4 @@
-# rhyn47
+# rhyn47(Standard)
 
 ![rhyn47](https://d3toh8on7lf5va.cloudfront.net/rhyn47-abacus-mini.jpg)
 
