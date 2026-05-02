@@ -72,3 +72,9 @@ void pointing_device_init_user(void) {
     rhyn47_lptb_set_mouse_layer(_MOUSE);
     rhyn47_lptb_set_scroll_layer(_SCROLL);
 }
+
+report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
+    mouse_report.v = -mouse_report.v;
+    mouse_report.h = -mouse_report.h;
+    return mouse_report;
+}
