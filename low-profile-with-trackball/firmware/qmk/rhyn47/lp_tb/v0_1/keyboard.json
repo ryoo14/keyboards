@@ -3,7 +3,7 @@
     "keyboard_name": "rhyn47 low-profile with trackball",
     "maintainer": "ryo",
     "bootloader": "rp2040",
-    "diode_direction": "ROW2COL",
+    "diode_direction": "COL2ROW",
     "features": {
         "bootmagic": true,
         "command": false,
