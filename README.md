@@ -25,4 +25,4 @@ Please refer to the README file located in each keyboard's folder.
 
 ## Low-Profile with TrackBall
 
-coming soon
+![rhyn47-trackball](https://d3toh8on7lf5va.cloudfront.net/rhyn47-trackball.jpg)
