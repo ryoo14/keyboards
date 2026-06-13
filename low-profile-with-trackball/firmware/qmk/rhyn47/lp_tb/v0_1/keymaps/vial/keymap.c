@@ -29,40 +29,40 @@ enum layer_names { _BASE, _LOWER, _UPPER, _FN, _MOUSE, _SCROLL};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT(
-        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,     KC_I,    KC_O,    KC_P,    KC_BSPC,
-        KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,     KC_K,    KC_L,    KC_SCLN, KC_ENT,
-        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,     KC_COMM, KC_DOT,  KC_SLSH, RSFT_T(KC_QUOTE),
-        KC_ESC,  KC_CAPS, KC_LALT, KC_LGUI, MO(_LOWER),   KC_SPC,      MO(_UPPER),    KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT
+        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,       KC_T,   KC_Y,  KC_U,       KC_I,    KC_O,    KC_P,    KC_BSPC,
+        KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,       KC_G,   KC_H,  KC_J,       KC_K,    KC_L,    KC_SCLN, KC_ENT,
+        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,       KC_B,   KC_N,  KC_M,       KC_COMM, KC_DOT,  KC_SLSH, RSFT_T(KC_QUOTE),
+        KC_ESC,  KC_CAPS, KC_LALT, KC_LGUI, MO(_LOWER), KC_SPC, KC_NO, MO(_UPPER), KC_LEFT, KC_DOWN, KC_UP,   KC_RIGHT
     ),
     [_LOWER] = LAYOUT(
         KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR,  KC_ASTR, KC_LPRN, KC_RPRN, KC_DEL,
         _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_UNDS,  KC_PLUS, KC_LCBR, KC_RCBR, KC_ENT,
         _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______,  _______, _______, _______, KC_PIPE,
-        _______, _______, _______, _______, _______, _______,          MO(_FN),  KC_END,  KC_PGDN, KC_PGUP, KC_HOME
+        _______, _______, _______, _______, _______, _______, KC_NO,   MO(_FN),  KC_END,  KC_PGDN, KC_PGUP, KC_HOME
     ),
     [_UPPER] = LAYOUT(
         KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_DEL,
         _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_MINS, KC_EQL,  KC_LBRC, KC_RBRC, KC_ENT,
         _______, KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, _______, _______, _______, KC_BSLS,
-        _______, _______, _______, _______, MO(_FN), _______,          _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_MPLY
+        _______, _______, _______, _______, MO(_FN), _______, KC_NO,   _______, KC_MUTE, KC_VOLD, KC_VOLU, KC_MPLY
     ),
     [_FN] = LAYOUT(
         KC_LCTL, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         KC_LALT, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
         KC_DEL,  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        KC_INS,  _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______
+        KC_INS,  _______, _______, _______, _______, _______, KC_NO,   _______, _______, _______, _______, _______
     ),
     [_MOUSE] = LAYOUT(
         _______, _______, _______, _______, _______,     _______, _______,       MS_BTN3,       LCTL(KC_UP),    MO(_SCROLL),   _______, _______,
         _______, _______, _______, _______, _______,     _______, LGUI(KC_LBRC), MS_BTN1,       MS_BTN2,        LGUI(KC_RBRC), _______, _______,
         _______, _______, _______, _______, _______,     _______, _______,       LCTL(KC_LEFT), LCTL(KC_RIGHT), _______,       _______, _______,
-        _______, _______, _______, _______, MO(_SCROLL), _______,                _______,       _______,        _______,       _______, _______
+        _______, _______, _______, _______, MO(_SCROLL), _______, KC_NO,         _______,       _______,        _______,       _______, _______
     ),
     [_SCROLL] = LAYOUT(
         _______, _______, _______, _______, _______, _______, _______, MS_BTN3, _______, _______, _______, _______,
         _______, _______, _______, _______, _______, _______, MS_BTN4, MS_BTN1, MS_BTN2, MS_BTN5, _______, _______,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______,          _______, _______, _______, _______, _______
+        _______, _______, _______, _______, _______, _______, KC_NO,   _______, _______, _______, _______, _______
     ),
 };
 
