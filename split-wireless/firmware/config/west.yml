@@ -1,0 +1,19 @@
+manifest:
+  remotes:
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: badjeff
+      url-base: https://github.com/badjeff
+  projects:
+    - name: zmk
+      remote: zmkfirmware
+      revision: main
+      import: app/west.yml
+    # PMW3610 ドライバ。compatible / CONFIG 名は README で最終照合すること
+    # （notes §7-1, §14）。別フォークに替えるならここと
+    # rhyn47_right.overlay / rhyn47_right.conf の3箇所を揃える。
+    - name: zmk-pmw3610-driver
+      remote: badjeff
+      revision: main
+  self:
+    path: config

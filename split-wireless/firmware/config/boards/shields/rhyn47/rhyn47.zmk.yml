@@ -1,0 +1,12 @@
+file_format: "1"
+id: rhyn47
+name: rhyn47 (split-wireless)
+type: shield
+url: https://github.com/ryoo14/rhyn47
+requires: [xiao_ble]
+features:
+  - keys
+  - pointer
+siblings:
+  - rhyn47_left
+  - rhyn47_right

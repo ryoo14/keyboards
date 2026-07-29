@@ -1,0 +1,100 @@
+/*
+ * rhyn47 (split-wireless) keymap
+ *
+ * low-profile-with-trackball の QMK 版 (lp_tb/v0_1/keymaps/vial/keymap.c) からの移植。
+ * 物理配列が同じ 4行×12列・右手最下段内側がトラックボールなので、レイヤ構成をそのまま持ってきた。
+ *
+ * バインド順 = rhyn47.dtsi の matrix-transform の map 順。
+ *   row0 = 12 / row1 = 12 / row2 = 12 / row3 = 11（RC(3,6) がトラボ穴）  計 47
+ *
+ * QMK からの差分（意図的な追加）:
+ *   - FN レイヤに BLE 関連（&bt / &out / &bootloader / &sys_reset）を追加。
+ *     無線機なのでペアリング操作の口が要る。XIAO 直付けでリセットボタンが
+ *     ケースに隠れる可能性もあるため &bootloader をキーからも踏めるようにした。
+ *     プロファイル選択は Q W E R T（BT_SEL 0-4）。FN は右手/左手どちらの親指でも
+ *     踏めるので、左手の指がそのまま数字代わりに使える配置にしてある。
+ *     &bt BT_CLR は誤爆防止で離れた BSPC の位置に置いた。
+ *   - QMK の auto-mouse / scroll layer は rhyn47_right.overlay 側の
+ *     input-processors（zip_temp_layer / zip_xy_to_scroll_mapper）で再現している。
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+
+#define BASE   0
+#define LOWER  1
+#define UPPER  2
+#define FN     3
+#define MOUSE  4
+#define SCROLL 5
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        base_layer {
+            display-name = "Base";
+            bindings = <
+&kp TAB    &kp Q     &kp W     &kp E     &kp R      &kp T       &kp Y  &kp U      &kp I      &kp O     &kp P     &kp BSPC
+&kp LCTRL  &kp A     &kp S     &kp D     &kp F      &kp G       &kp H  &kp J      &kp K      &kp L     &kp SEMI  &kp ENTER
+&kp LSHFT  &kp Z     &kp X     &kp C     &kp V      &kp B       &kp N  &kp M      &kp COMMA  &kp DOT   &kp FSLH  &mt RSHFT SQT
+&kp ESC    &kp CAPS  &kp LALT  &kp LGUI  &mo LOWER  &kp SPACE          &mo UPPER  &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT
+            >;
+        };
+
+        lower_layer {
+            display-name = "Lower";
+            bindings = <
+&kp TILDE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR   &kp DEL
+&trans     &kp F1    &kp F2  &kp F3    &kp F4    &kp F5       &kp F6     &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC   &kp ENTER
+&trans     &kp F7    &kp F8  &kp F9    &kp F10   &kp F11      &kp F12    &trans     &trans     &trans     &trans     &kp PIPE
+&trans     &trans    &trans  &trans    &trans    &trans                  &mo FN     &kp END    &kp PG_DN  &kp PG_UP  &kp HOME
+            >;
+        };
+
+        upper_layer {
+            display-name = "Upper";
+            bindings = <
+&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4   &kp N5     &kp N6   &kp N7     &kp N8      &kp N9        &kp N0        &kp DEL
+&trans     &kp F1  &kp F2  &kp F3  &kp F4   &kp F5     &kp F6   &kp MINUS  &kp EQUAL   &kp LBKT      &kp RBKT      &kp ENTER
+&trans     &kp F7  &kp F8  &kp F9  &kp F10  &kp F11    &kp F12  &trans     &trans      &trans        &trans        &kp BSLH
+&trans     &trans  &trans  &trans  &mo FN   &trans              &trans     &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP
+            >;
+        };
+
+        fn_layer {
+            display-name = "Fn";
+            bindings = <
+&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans        &trans  &trans  &trans  &trans  &bt BT_CLR
+&kp LALT   &trans        &trans        &trans        &trans        &trans          &out OUT_TOG  &trans  &trans  &trans  &trans  &trans
+&kp DEL    &trans        &trans        &trans        &trans        &trans          &bootloader   &trans  &trans  &trans  &trans  &sys_reset
+&kp INS    &trans        &trans        &trans        &trans        &trans                        &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        /* ボールを動かすと自動で乗る（rhyn47_right.overlay の zip_temp_layer） */
+        mouse_layer {
+            display-name = "Mouse";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans      &trans    &trans        &mkp MCLK     &kp LC(UP)     &mo SCROLL    &trans  &trans
+&trans  &trans  &trans  &trans  &trans      &trans    &kp LG(LBKT)  &mkp LCLK     &mkp RCLK      &kp LG(RBKT)  &trans  &trans
+&trans  &trans  &trans  &trans  &trans      &trans    &trans        &kp LC(LEFT)  &kp LC(RIGHT)  &trans        &trans  &trans
+&trans  &trans  &trans  &trans  &mo SCROLL  &trans                  &trans        &trans         &trans        &trans  &trans
+            >;
+        };
+
+        /* このレイヤの間だけボールがスクロールになる（overlay の scroller ノード） */
+        scroll_layer {
+            display-name = "Scroll";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &mkp MCLK  &trans     &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &mkp MB4  &mkp LCLK  &mkp RCLK  &mkp MB5  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans     &trans     &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans              &trans     &trans     &trans    &trans  &trans
+            >;
+        };
+    };
+};
