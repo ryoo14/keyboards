@@ -1,6 +1,0 @@
-# west はマニフェストリポジトリ（west.yml の self.path = config）の直下の
-# zephyr/module.yml を見る。board_root はこのモジュールルート（= config/）からの相対。
-# → config/boards/shields/rhyn47 が shield として確実に拾われる。
-build:
-  settings:
-    board_root: .
