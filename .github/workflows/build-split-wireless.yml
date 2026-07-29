@@ -1,0 +1,20 @@
+name: Build split-wireless firmware
+
+on:
+  push:
+    paths:
+      - "split-wireless/firmware/**"
+      - ".github/workflows/build-split-wireless.yml"
+  pull_request:
+    paths:
+      - "split-wireless/firmware/**"
+  workflow_dispatch:
+
+jobs:
+  build:
+    # zmk-config が split-wireless/firmware/ 配下にあるのでパスを明示する
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      build_matrix_path: split-wireless/firmware/build.yaml
+      config_path: split-wireless/firmware/config
+      archive_name: rhyn47-split-wireless
